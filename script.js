@@ -45,7 +45,7 @@ const testing = document.getElementById("team-list-debug");
 
 let output = "";
 
-//ciclo
+//ciclo 
 
 for (let i = 0; i < teamMembers.length; i++) {
 
