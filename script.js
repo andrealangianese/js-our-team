@@ -58,11 +58,11 @@ for (let i = 0; i < teamMembers.length; i++) {
   cards +=
     `<div class="team-card">
                 <div class="card-image">
-                    <img src="./img/male1.png" alt="tipo 1">
+                    <img src= "${memberTeam.img}" alt="${memberTeam.name}">
                 </div>
                 <div class="card-text">
-                    <h3>marco bianchi</h3>
-                    <p>designer</p>
+                    <h3>${memberTeam.name}</h3>
+                    <p>${memberTeam.email}</p>
                 </div>
             </div>`
 }
