@@ -39,11 +39,13 @@ const teamMembers = [
 
 //debug
 
-const testing = document.getElementById("team-list-debug");
+//const testing = document.getElementById("team-list-debug");
+
+const teamContainer = document.querySelector(".team-container");
 
 //variabile in cui andrò a inserire i valori
 
-let output = "";
+let cards = "";
 
 //ciclo 
 
@@ -53,13 +55,16 @@ for (let i = 0; i < teamMembers.length; i++) {
   const memberTeam = teamMembers[i]
 
   //aggiungo tutti i miei valori usando <li> perchè sono in <ul>
-  output +=
-    `<li> 
-  ${memberTeam.name}
-   ${memberTeam.role} 
-   ${memberTeam.email} 
-   ${memberTeam.img}
-  </li>`
+  cards +=
+    `<div class="team-card">
+                <div class="card-image">
+                    <img src="./img/male1.png" alt="tipo 1">
+                </div>
+                <div class="card-text">
+                    <h3>marco bianchi</h3>
+                    <p>designer</p>
+                </div>
+            </div>`
 }
 
 //inserisco valori in html
