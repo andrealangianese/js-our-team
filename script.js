@@ -69,4 +69,4 @@ for (let i = 0; i < teamMembers.length; i++) {
 
 //inserisco valori in html
 
-testing.innerHTML = output
+teamContainer.innerHTML = cards
