@@ -55,19 +55,42 @@ for (let i = 0; i < teamMembers.length; i++) {
   const memberTeam = teamMembers[i]
 
   //aggiungo tutti i miei valori usando <li> perchè sono in <ul>
-  cards +=
-    `<div class="team-card">
-                <div class="card-image">
-                    <img src= "${memberTeam.img}" alt="${memberTeam.name}">
-                </div>
-                <div class="card-text">
-                    <h3>${memberTeam.name}</h3>
-                    <p>${memberTeam.role}</p>
-                    <a href="#"><p>${memberTeam.email}</p></a>
-                    </div>
-            </div>`
+//   cards +=
+//     `<div class="team-card">
+//                 <div class="card-image">
+//                     <img src= "${memberTeam.img}" alt="${memberTeam.name}">
+//                 </div>
+//                 <div class="card-text">
+//                     <h3>${memberTeam.name}</h3>
+//                     <p>${memberTeam.role}</p>
+//                     <a href="#"><p>${memberTeam.email}</p></a>
+//                     </div>
+//             </div>`
+// }
+
+
+//ritorno della funzione 
+
+cards += createMembers(memberTeam);
 }
 
 //inserisco valori in html
 
-teamContainer.innerHTML = cards
+teamContainer.innerHTML = cards;
+//funxione per geneare card
+
+function createMembers(memberObj) {
+
+  const cards = `<div class="team-card">
+                <div class="card-image">
+                    <img src= "${memberObj.img}" alt="${memberObj.name}">
+                </div>
+                <div class="card-text">
+                    <h3>${memberObj.name}</h3>
+                    <p>${memberObj.role}</p>
+                    <a href="#"><p>${memberObj.email}</p></a>
+                    </div>
+            </div>`
+
+            return cards
+}
